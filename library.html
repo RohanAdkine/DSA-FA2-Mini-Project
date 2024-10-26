@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCCOE Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="heading">Pimpri Chinchwad College of Engineering, Pune.</h1>
+            <h2 class="subheading">Library Management System</h2>
+        </header>
+
+        <div class="input-group">
+            <label for="bookTitle">Book Title:</label>
+            <input type="text" id="bookTitle" placeholder="Enter book title">
+        </div>
+
+        <div class="buttons">
+            <button onclick="returnBook()">Return Book</button>
+            <button onclick="getMostRecentlyReturnedBook()">Most Recently Returned Book</button>
+            <button onclick="requestToBorrowBook()">Borrow Book</button>
+            <button onclick="processBorrowRequest()">Process Borrow Request</button>
+            <button onclick="displayBorrowRequests()">Display Borrow Requests</button>
+            <button onclick="displayAllBooks()">Display All Books</button>
+        </div>
+
+        <div class="input-group">
+            <label for="searchQuery">Search for a Book:</label>
+            <input type="text" id="searchQuery" placeholder="Search book title">
+            <button onclick="searchBook()">Search</button>
+        </div>
+
+        <div id="output"></div>
+
+        <h2 id="allBooksTitle" style="display:none;">All Books</h2>
+        <ul id="bookList" style="display:none;"></ul>
+
+        <h2 id="searchResultsTitle" style="display:none;">Search Results</h2>
+        <ul id="searchResultList" style="display:none;"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
